@@ -35,6 +35,14 @@ async function register ({
     default: ''
   })
   registerSetting({
+    name: 'ip_pattern',
+    label: 'Forbidden patterns on user IP address.',
+    descriptionHTML: 'One pattern per line. You can specify a case-insensitive substring that should not be allowed (for example «192.168.0.2»), or a regular expression («/^192\./»). You can start a line with a # to add a comment line.',
+    type: 'input-textarea',
+    private: true,
+    default: ''
+  })
+  registerSetting({
     name: 'error_message',
     label: 'Error message',
     descriptionHTML: 'Error message to display when the registration is forbidden.',
@@ -74,6 +82,7 @@ async function filterRegistration(result, params, settingsManager, peertubeHelpe
     'displayname_pattern',
     'username_pattern',
     'email_pattern',
+    'ip_pattern',
     'error_message'
   ])
 
@@ -81,6 +90,7 @@ async function filterRegistration(result, params, settingsManager, peertubeHelpe
     !checkValue(logger, params.body.displayName ?? '', settings['displayname_pattern'])
     || !checkValue(logger, params.body.username ?? '', settings['username_pattern'])
     || !checkValue(logger, params.body.email ?? '', settings['email_pattern'])
+    || !checkValue(logger, params.ip ?? '', settings['ip_pattern'])
   ) {
     return { allowed: false, errorMessage: settings['error_message'] }
   }
