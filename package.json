@@ -1,7 +1,7 @@
 {
   "name": "peertube-plugin-filterregistrations",
   "description": "PeerTube plugin for filtering registrations request, and forbid some patterns in nicknames, mails, ...",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "John Livingston",
   "bugs": "https://github.com/JohnXLivingston/peertube-plugin-filterregistrations/issues",
   "clientScripts": [],
