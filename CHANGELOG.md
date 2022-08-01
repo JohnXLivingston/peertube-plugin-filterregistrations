@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.1
+
+* License in package.json
+
 ## v0.1.0
 
 * Filter on IP address.
