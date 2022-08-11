@@ -1,5 +1,3 @@
-const whois = require('whois-json')
-
 async function register ({
   registerHook,
   registerSetting,

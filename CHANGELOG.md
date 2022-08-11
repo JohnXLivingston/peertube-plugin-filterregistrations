@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.2
+
+* Fix unecessary require(), that leads to a dependency problem (typo).
+
 ## v0.1.1
 
 * License in package.json
