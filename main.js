@@ -53,6 +53,10 @@ async function register ({
     target: 'filter:api.user.signup.allowed.result',
     handler: (result, params) => filterRegistration(result, params, settingsManager, peertubeHelpers)
   })
+  registerHook({
+    target: 'filter:api.user.request-signup.allowed.result',
+    handler: (result, params) => filterRegistration(result, params, settingsManager, peertubeHelpers)
+  })
 }
 
 async function unregister () {

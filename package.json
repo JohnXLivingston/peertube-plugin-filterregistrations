@@ -12,7 +12,7 @@
   "css": [],
   "devDependencies": {},
   "engine": {
-    "peertube": ">=2.1.0"
+    "peertube": ">=5.1.0"
   },
   "homepage": "https://github.com/JohnXLivingston/peertube-plugin-filterregistrations",
   "keywords": [

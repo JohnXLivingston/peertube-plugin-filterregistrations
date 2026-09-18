@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.3
+
+* Also checking conditions on signup requests.
+
 ## v0.1.2
 
 * Fix unecessary require(), that leads to a dependency problem (typo).
